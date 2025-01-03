@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul class="lorem">
+        <li>etc</li>
+        <li>etc..</li>
+        
+    </ul>
+    <script>
+        function MyName(changeME) {
+         const li = document.createElement('li')
+         li.appendChild(document.createTextNode(changeME))
+         document.querySelector('.lorem').appendChild(li)
+        }
+        MyName("ho lorem")
+        //edit 
+
+     const edit = document.querySelector('li:nth-child(2)')
+    const newli = document.createElement('li')
+    newli.textContent = "harshu naala"
+    edit.replaceWith(newli)
+//edit pro max
+  const firstlang = document.createElement('li')
+  firstlang.outerHTML = '<li>typescript</li>'
+//remove
+const lastlang = document.querySelector('li:last-child')
+console.log(lastlang)
+lastlang.remove()
+
+</script>    
+
+    </Script>
+</body>
+</html>
