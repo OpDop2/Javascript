@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="start">start</button>
+    <button id="stop">stop</button>
+
+<script>
+let clock; // Variable to store the interval ID
+const date = function () {
+    console.log(new Date().toDateString());
+};
+const time = function () {
+    if (!clock) {
+        clock = setInterval(date, 1000);
+    }
+};
+document.getElementById("start").addEventListener('click', function () {
+    time();
+});
+    document.getElementById("stop").addEventListener('click', function () {
+    if (clock) { 
+        clearInterval(clock); 
+        clock = null; 
+    }
+});
+</script>    
+</body>
+</html>
+
