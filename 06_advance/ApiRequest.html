@@ -7,17 +7,15 @@
 </head>
 <body>
  <script>
- const RequestUrl = 'https://api.github.com/users/hiteshchoudhary'
- const XHR  = new XMLHttpRequest()
- XHR.open('GET', RequestUrl)
-XHR.onreadystatechange = function() {
-    console.log(XHR.readyState)
-    if(XHR.readyState === 4) {
-        const data = this.response
-        console.log(data.followers);
-    }
-}
- XHR.send()
+const RequestUrl = "https://api.github.com/users/hiteshchoudhary"
+const xhr = new XMLHttpRequest()
+const request = xhr.open("GET", RequestUrl)
+xhr.onreadystatechange = function() {
+    if(xhr.readyState === 4){
+     const data = JSON(this.responseText)
+     console.log(data)
+}}
+xhr.send()
  </script>
 </body>
 </html>
